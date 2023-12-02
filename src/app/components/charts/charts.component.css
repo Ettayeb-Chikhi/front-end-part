@@ -1,0 +1,16 @@
+.chart-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#spline-chart{
+    width: 90%;
+}
+#pie-chart{
+    width: 40%;
+}
+#stacked-bar{
+    width: 60%;
+    height: min-content;
+}

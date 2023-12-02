@@ -1,0 +1,23 @@
+<div class="text-center mt-2">
+  <h1>Charts Page</h1>
+</div>
+<div class="chart-container">
+  <div  id="spline-chart">
+    <apx-chart
+    [series]="splineChartOptions.series!"
+    [chart]="splineChartOptions.chart!"
+    [labels]="splineChartOptions.labels"
+    [responsive]="splineChartOptions.responsive!"
+  ></apx-chart>
+  </div>
+  <div id="stacked-bar">
+    <apx-chart [series]="chartOptions.series!" [chart]="chartOptions.chart!" [dataLabels]="chartOptions.dataLabels!"
+      [plotOptions]="chartOptions.plotOptions!" [responsive]="chartOptions.responsive!" [xaxis]="chartOptions.xaxis!"
+      [legend]="chartOptions.legend!" [fill]="chartOptions.fill!"></apx-chart>
+  </div>
+  <div id="pie-chart" >
+    <apx-chart [series]="pieChartOptions.series!" [chart]="pieChartOptions.chart!"
+      [xaxis]="pieChartOptions.xaxis!" [stroke]="pieChartOptions.stroke!" [tooltip]="pieChartOptions.tooltip!"
+      [dataLabels]="pieChartOptions.dataLabels!"></apx-chart>
+  </div>
+</div>

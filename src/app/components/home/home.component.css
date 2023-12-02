@@ -1,0 +1,11 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+.side{
+    width: 300px;
+}
+.content{
+    width:100%
+}

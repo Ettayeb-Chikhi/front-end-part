@@ -1,0 +1,49 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E8F6EF;
+}
+
+.form-container{
+    background-color: white;
+    min-width: 600px;
+}
+h1{
+    text-align: center;
+}
+h1,label{
+    color: #610C9F;
+}
+.hint{
+    display: block;
+    color: gray;
+    transition: all .3s ease-in-out;
+}
+.hint:hover{
+    color: #610C9F;
+}
+.sign-up-btn{
+    padding: 5px;
+    background-color: #610C9F;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    border: none;
+    width: 100px;
+    transition: all .5s ease-in-out;
+    margin-left: auto;
+    cursor: pointer;
+}
+button:disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+form{
+    width: 100%;
+}
+.login-btn:hover{
+    opacity: 0.7;
+}

@@ -1,0 +1,15 @@
+<div class="card shadow shadow-rounded p-2" style="width: 20rem;">
+    <div class="card-body">
+      <h1 class="card-title">Confirmation Box</h1>
+      <p class="card-text">are you sure you want to {{data.action}}</p>
+      <div class="row">
+        <div class="col-4 me-3">
+            <button class="btn btn-success" mat-dialog-close="">cancel</button>
+        </div>
+        <div class="col-4 me-3">
+            <button class="btn btn-danger" (click)="confirm()">Confirm</button>
+        </div>
+      </div>
+    </div>
+</div>
+  

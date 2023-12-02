@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <div class="form-container shadow p-5 ">
+        <h1>Sign up</h1>
+        <form [formGroup]="signUpForm" class="">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" [class]="validControls('fullName')" id="name" placeholder="your name" formControlName="fullName">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                   Please provide a valid name 
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" formControlName="email"  [class]="validControls('email')" id="exampleFormControlInput1" placeholder="name@example.com" />
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                   Please provide a valid email 
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">password</label>
+                <input type="password"  [class]="validControls('password')" formControlName="password" class="form-control" id="password" />
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    <span *ngIf="!isPasswordValid()">passwords dont match</span><br/>
+                   <span *ngIf="signUpForm.controls['password'].hasError('minlength')">password must be at least 6 characters long</span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirm" class="form-label">Confirm Password</label>
+                <input type="password"  [class]="validControls('confirmPassword')" class="form-control" formControlName="confirmPassword" id="confirm" />
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    <span *ngIf="!isPasswordValid()">passwords dont match</span><br/>
+                   <span *ngIf="signUpForm.controls['confirmPassword'].hasError('minlength')">password must be at least 6 characters long</span>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="sign-up-btn" (click)="onSubmit()" [disabled]="!signUpForm.valid || !isPasswordValid()">Sign Up</button>
+                <a routerLink="/login" class="hint mt-2">You already have an account ? Login</a>
+            </div>
+        </form>
+    </div>
+</div>
